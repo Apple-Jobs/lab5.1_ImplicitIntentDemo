@@ -5,7 +5,20 @@
 Android实验五_Intent，本代码创建了Android工程，并在工程中通过自定义WebView加载URL来验证隐式Intent的使用。
 
 ## 关键代码：
+```
+    <uses-permission android:name="android.permission.INTERNET" />
+```
 
+```
+        <activity android:name=".WebViewActivity">
+            <intent-filter>
+                <action android:name="com.action.webview"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.action.webviewcategory"/>
+
+            </intent-filter>
+        </activity>
+```
 
 ```
 public class MainActivity extends AppCompatActivity {
